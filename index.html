@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>الوحدة التنفيذية - الطاقة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== شريط التنقل ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <!-- ///////////////////////////////////////////////////// -->
+      <img src="images/piu-logo.png" alt="PIU Logo">
+    </div>
+
+    <!-- روابط القائمة -->
+    <div class="nav-links">
+      <a href="#home" id="nav-home"><span>الرئيسية</span></a>
+      <a href="#about" id="nav-about"><span>من نحن</span></a>
+      <a href="#objectives" id="nav-objectives" ><span>الأهداف</span></a>
+      <a href="#more" id="nav-more" ><span>المزيد</span></a>
+      <a href="ConfPage/index.html" id="nav-conference"><span>المؤتمر</span></a>
+      <a href="#contact" id="nav-contact" ><span>تواصل معنا</span></a>
+    </div>
+
+    <!-- أدوات التحكم -->
+    <div class="nav-controls">
+      <button class="language-switcher" onclick="toggleLanguage()">
+        <img src="images/lang-icon.svg" alt="Language">
+      </button>
+      <span class="mobile-menu-icon" onclick="toggleMenu()">
+        <img src="images/menu-icon.png" alt="Menu">
+      </span>
+    </div>
+
+    <!-- قائمة الجوال -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="toggleMenu()" id="nav-home-mobile">الرئيسية</a>
+      <a href="#about" onclick="toggleMenu()" id="nav-about-mobile">من نحن</a>
+      <a href="#objectives" onclick="toggleMenu()" id="nav-objectives-mobile">الأهداف</a>
+      <a href="#more" onclick="toggleMenu()" id="nav-more-mobile">المزيد</a>
+  <a href="ConfPage/index.html" onclick="toggleMenu()" id="nav-conference-mobile">المؤتمر</a>
+      <a href="#contact" onclick="toggleMenu()" id="nav-contact-mobile">تواصل معنا</a>
+    </div>
+  </nav>
+
+  <!-- ====== الصفحة الرئيسية ====== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 id="hero-title">مرحبًا بكم في الوحدة التنفيذية للمشاريع الممولة دوليًا</h1>
+      <p id="hero-text">نعمل من أجل مستقبل طاقة مستدام ومزدهر لليمن</p>
+    </div>
+  </section>
+
+  <!-- ====== About Us ====== -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <!-- العنوان ثابت بالأعلى -->
+    <h2 class="about-heading" id="about-title">من نحن</h2>
+
+    <div class="about-content">
+      <!-- النص الأول -->
+      <div class="about-text reveal" id="about-text-box1">
+        <p id="about-text1">
+          "الوحدة التنفيذية للمشاريع الممولة دوليًا (PIU) تعمل تحت إشراف وزارة الكهرباء والطاقة، وهي مسؤولة عن إدارة المشاريع الممولة دوليًا والتي تهدف إلى تعزيز الوصول إلى الطاقة والبنية التحتية والاستدامة. وتركّز على الطاقة المتجددة، والتنمية الريفية، وبناء القدرات المؤسسية. تلعب PIU دورًا محوريًا في تطوير قطاع الطاقة في اليمن وتعزيز النمو والمرونة على المدى الطويل. \"تعزيز الوصول إلى الطاقة، موثوقية البنية التحتية، الحلول المتجددة، التنمية الريفية، وبناء القدرات المؤسسية، محطات الطاقة بالغاز، وتوسيع شبكات النقل والتوزيع\".",
+
+        </p>
+      </div>
+
+      <!-- النص الثاني على شكل كرت -->
+      <div class="about-card reveal" id="about-text-box2">
+        <p id="about-text2">
+          نحن نركز باستمرار على بناء شراكات قوية وتعاونية مع المانحين الدوليين، مع التأكيد على الشفافية والتوافق مع الأولويات العالمية لدفع حلول الطاقة المستدامة والتنمية التحويلية في اليمن.
+       </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== Facility Section ====== -->
+<section class="facility-section" id="facility">
+  <div class="overlay"></div>
+  <div class="container">
+    <h2 class="facility-title reveal" id="facility-title">
+      مرافقنا التي تم تقييمها بعناية
+    </h2>
+
+    <div class="facility-wrapper">
+      <!-- الصورة -->
+      <div class="facility-image reveal">
+        <img src="images/facility.png" alt="Facility Image">
+      </div>
+
+      <!-- النصوص (الكروت) -->
+      <div class="facility-texts">
+        <!-- الكرت الأول -->
+        <div class="facility-card reveal">
+          <p id="facility-text1">
+            أجرت شركة أفكار لصالح UNOPS تقييماً شاملاً لقدرات الوحدة التنفيذية، شمل الإدارة المالية 
+            وعمليات المشتريات وأطر المتابعة للمشاريع، بهدف مواءمة الممارسات مع المعايير الدولية 
+            وتعزيز القدرة على إدارة المشاريع الممولة دولياً بكفاءة.
+          </p>
+        </div>
+
+        <!-- الكرت الثاني -->
+        <div class="facility-card reveal">
+          <p id="facility-text2">
+            بعد التقييم، عززت الوحدة التنفيذية تعاونها مع البنك الدولي وUNOPS عبر دراسات استراتيجية 
+            مثل دراسة الشبكات المصغرة للطاقة الشمسية، ودراسة فرص مشاركة القطاع الخاص، إضافة إلى 
+            مراجعة تقييم سوق الطاقة الشمسية خارج الشبكة لدعم التوسع في الحلول المتجددة في اليمن.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ====== CO2 Section ====== -->
+<section class="co2-section" id="co2">
+  <div class="container">
+
+    <!-- العنوان بالوسط -->
+    <h2 class="co2-heading reveal" id="co2-title">أثر الطاقة الشمسية</h2>
+
+    <div class="co2-container">
+
+      <!-- الكرت بالصورة -->
+      <div class="co2-card reveal">
+        <img src="images/solar-project.png" alt="Solar Project">
+      </div>
+
+      <!-- النص -->
+      <div class="co2-text reveal">
+        <p id="co2-text">
+          يتيح تسجيل مشروع الطاقة الشمسية الكهروضوئية ضمن برنامج معترف به لائتمان الكربون لوزارة الكهرباء الحصول على تمويل مهم لدعم مبادرات الطاقة المتجددة، بما يتماشى مع رؤية الدولة للتنمية المستدامة ويعزز مكانتها في مكافحة التغير المناخي عالميًا. تمت دراسة تأثير المشروع في ثلاثة سيناريوهات مختلفة لانبعاثات الشبكة: شبكات تعتمد بشكل رئيسي على الديزل، وأخرى على الغاز، وأخرى مختلطة (فحم، وغاز، وديزل). أظهرت شبكة الديزل أعلى نسبة خفض في انبعاثات CO₂ بنسبة 43.5%، تليها الشبكة المختلطة بنسبة 33.6%، ثم الشبكة المعتمدة على الغاز بنسبة 27.9%، مما يوضح فعالية الطاقة الشمسية في تقليل الانبعاثات من مصادر طاقة متنوعة. كما تم تحليل أداء المحطة خلال أكتوبر 2024 باستخدام بيانات حقيقية، مما يؤكد دور الطاقة الشمسية في الحد من الغازات الدفيئة. وتُنتج المحطة سنويًا 242,717.52 ميغاواط ساعة، ومن المتوقع أن تولد أكثر من 6 ملايين ميغاواط ساعة خلال عمر المشروع البالغ 25 عامًا، مما يبرز مساهمتها الكبيرة والطويلة الأمد في توليد الطاقة النظيفة.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ====== Objectives Section ====== -->
+<section class="objectives-section" id="objectives">
+  <div class="container">
+    <h2 id="obj-title">الأهداف</h2>
+    <p id="obj-intro">
+      تعمل الوحدة التنفيذية (PIU) تحت إشراف وزارة الكهرباء والطاقة وقد حققت نجاحات بارزة 
+      في إدارة المشاريع الممولة دوليًا لتحسين البنية التحتية للطاقة في اليمن. 
+      ويهدف هذا الملخص إلى مواءمة الوصف الوظيفي وقوة الإدارات مع الأهداف المطلوبة.
+    </p>
+
+    <div class="objectives-grid">
+      <div class="objective-box">
+        <img src="images/icon-delivery.png" alt="Optimize Delivery" class="objective-icon">
+        <h3 id="obj1-title">تحسين تسليم المشاريع</h3>
+        <p id="obj1-text">
+          تركز PIU على الاستخدام الأمثل للموارد الممولة دوليًا من خلال عمليات مبسطة 
+          وإدارة فعّالة للمشاريع...
+        </p>
+      </div>
+
+      <div class="objective-box">
+        <img src="images/icon-compliance.png" alt="Ensure Compliance" class="objective-icon">
+        <h3 id="obj2-title">ضمان الامتثال</h3>
+        <p id="obj2-text">
+          تضمن PIU توافق عملياتها مع المعايير الدولية ومتطلبات المانحين عبر سياسات قوية...
+        </p>
+      </div>
+
+      <div class="objective-box">
+        <img src="images/icon-capacity.png" alt="Institutional Capacity" class="objective-icon">
+        <h3 id="obj3-title">تعزيز القدرات المؤسسية</h3>
+        <p id="obj3-text">
+          تلتزم PIU ببناء أنظمة وعمليات قوية تعزز الحوكمة وتُحسّن استخدام الموارد...
+        </p>
+      </div>
+
+      <div class="objective-box">
+        <img src="images/icon-energy.png" alt="Access to Energy" class="objective-icon">
+        <h3 id="obj4-title">توسيع الوصول إلى الطاقة</h3>
+        <p id="obj4-text">
+          تهدف PIU إلى تقديم حلول طاقة تحولية للمجتمعات المحرومة عبر مشاريع الطاقة المتجددة...
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== Departments Section ====== -->
+<section class="departments-section" id="departments">
+  <div class="container">
+    <h2 id="dept-title">الأقسام</h2>
+    <div class="departments-grid">
+      
+      <div class="dept-card reveal">
+        <img src="images/finance.png" alt="Finance" class="dept-icon">
+        <h3 id="dept1-title">الإدارة المالية</h3>
+        <p id="dept1-text">
+          تشرف على إعداد الموازنات، والتقارير المالية، وإدارة الموارد لضمان الامتثال والكفاءة التشغيلية.
+        </p>
+      </div>
+
+      <div class="dept-card reveal">
+        <img src="images/engineering.png" alt="Engineering" class="dept-icon">
+        <h3 id="dept2-title">الأقسام الفنية والهندسية والرقابية</h3>
+        <p id="dept2-text">
+          تدير التصاميم والإشراف وضمان الجودة للمشاريع، بالإضافة إلى التقييم والمتابعة ومواءمة الأهداف الاستراتيجية.
+        </p>
+      </div>
+
+      <div class="dept-card reveal">
+        <img src="images/procurement.png" alt="Procurement" class="dept-icon">
+        <h3 id="dept3-title">قسم المشتريات</h3>
+        <p id="dept3-text">
+          يتولى المناقصات واختيار الموردين وإدارة العقود لضمان الشفافية والكفاءة في الحصول على السلع والخدمات.
+        </p>
+      </div>
+
+      <div class="dept-card reveal">
+        <img src="images/environment.png" alt="Environment" class="dept-icon">
+        <h3 id="dept4-title">قسم الاستدامة البيئية والاجتماعية</h3>
+        <p id="dept4-text">
+          يشرف على الامتثال البيئي، وتقييم الأثر الاجتماعي، والتفاعل المجتمعي لضمان توافق المشاريع مع معايير التنمية المستدامة.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- ====== Achievements ====== -->
+<section class="achievements-section" id="achievements">
+  <div class="container">
+    <h2 id="achievements-title">الإنجازات</h2>
+
+    <!-- إنجازات سريعة -->
+    <div class="achievements">
+      <div class="achievement" data-target="4.7" data-suffix="M+" data-fixed="1">
+        <div class="circle">
+          <img src="images/icon-beneficiaries.png" alt="Beneficiaries">
+          <span class="count">0</span>
+        </div>
+        <p id="achv1">+4.7M مستفيد</p>
+      </div>
+
+      <div class="achievement" data-target="20" data-suffix="%" data-fixed="0">
+        <div class="circle">
+          <img src="images/icon-growth.png" alt="Growth">
+          <span class="count">0</span>
+        </div>
+        <p id="achv2">20% نمو</p>
+      </div>
+
+      <div class="achievement" data-target="153.8" data-suffix="M$" data-fixed="1">
+        <div class="circle">
+          <img src="images/icon-projects.png" alt="Projects">
+          <span class="count">0</span>
+        </div>
+        <p id="achv3">153.8M$ مشروع</p>
+      </div>
+    </div>
+
+    <!-- البوكسات -->
+    <div class="main-achievements">
+      <div class="achievement-card">
+        <h3 id="achievement1-title">توسيع الوصول للكهرباء</h3>
+      </div>
+
+      <div class="achievement-card">
+        <h3 id="achievement2-title">تعزيز موثوقية البنية التحتية</h3>
+      </div>
+
+      <div class="achievement-card">
+        <h3 id="achievement3-title">الترويج للطاقة المتجددة</h3>
+      </div>
+
+      <div class="achievement-card">
+        <h3 id="achievement4-title">تطوير المبادرات الريفية</h3>
+      </div>
+
+      <div class="achievement-card">
+        <h3 id="achievement5-title">بناء القدرات المؤسسية</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== More Section ====== -->
+<section class="more-section" id="more">
+  <div class="container">
+    <h2 class="more-title" id="more-title">المزيد عنا</h2>
+    <div class="more-content">
+      <!-- الصورة -->
+      <div class="more-image">
+        <img src="images/more-info.png" alt="More About PIU">
+      </div>
+
+      <!-- النص + الزر -->
+      <div class="more-text">
+        <p id="more-text">
+          لمعرفة المزيد عن الوحدة التنفيذية (PIU)، يمكنك الاطلاع على ملفنا التعريفي 
+          الذي يوضح مهامنا وإنجازاتنا ورؤيتنا لمستقبل قطاع الطاقة في اليمن.
+        </p>
+        <button class="download-btn" onclick="openPDF()">تحميل الملف</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== Contact Section ====== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <h2 class="contact-title" id="contact-title">تواصل معنا</h2>
+    <p class="contact-intro" id="contact-intro">
+      للاستفسارات أو أي تواصل، يمكنكم الاتصال بنا عبر الطرق التالية:
+    </p>
+
+    <div class="contact-grid">
+      <!-- البريد -->
+      <div class="contact-item">
+        <img src="images/email-icon.png" alt="Email" class="contact-icon">
+        <p id="contact-email">info@piu-ye.org</p>
+      </div>
+
+      <!-- الهاتف -->
+      <div class="contact-item">
+        <img src="images/phone-icon.png" alt="Phone" class="contact-icon">
+        <p id="contact-phone">00967-773691525</p>
+      </div>
+
+      <!-- الموقع -->
+      <div class="contact-item">
+        <img src="images/location-icon.png" alt="Location" class="contact-icon">
+        <p id="contact-location">"كابوتا, المنصوره, عدن, اليمن"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <p id="footer-text">جميع الحقوق محفوظة © 2025 PIU</p>
+</footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
