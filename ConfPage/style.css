@@ -1,0 +1,666 @@
+/* =========================
+   إعدادات الألوان والخطوط
+========================= */
+:root {
+  --main-green: #6BBF59;
+  --main-yellow: #F4B63F;
+  --main-yellow-dark: #d89a2a;
+  --main-blue: #0080C6;
+  --dark-overlay: rgba(0, 0, 0, 0.4);
+  --font-family: 'Cairo', sans-serif;
+}
+
+/* =========================
+   إعادة ضبط العناصر الأساسية
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+  background-color: #f9f9f9;
+  
+}
+
+/* =========================
+   شريط التنقل (Navbar)
+========================= */
+.navbar {
+  position: fixed; /* كان relative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: top 0.4s ease;
+  border-radius: 0 0 15px 15px; /* الحواف الدائرية أسفل */
+}
+
+
+.navbar.hide {
+  top: -120px;
+}
+
+.nav-logo img {
+  height: 48px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 16px;
+  min-width: 90px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.nav-links a:hover {
+  color: var(--main-green);
+  border-color: var(--main-yellow);
+}
+
+.nav-links a span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover span {
+  transform: scale(1.08);
+}
+
+/* =========================
+   أزرار اللغة والقائمة
+========================= */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language-switcher {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.language-switcher img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.language-switcher:hover img {
+  transform: scale(1.15);
+}
+
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.language-switcher i {
+  font-size: 24px;
+  color: #d89a2a;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.language-switcher:hover i {
+  transform: scale(1.2);
+  color: var(--main-green);
+}
+
+
+/* =========================
+   القائمة الجوال
+========================= */
+.mobile-menu {
+  position: fixed; /* بدل absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 2000;
+  padding: 20px;
+  min-width: 250px;
+  text-align: center;
+}
+
+/* زر الإغلاق X */
+.mobile-menu .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+}
+
+.mobile-menu .close-btn:hover {
+  color: rgba(228, 83, 83, 0.685);
+  border-radius: 8px;
+}
+
+/* الخلفية المعتمة عند فتح القائمة */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1500;
+  display: none;
+}
+
+
+.mobile-menu a {
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.mobile-menu a:hover {
+  background-color: var(--main-green);
+  color: white;
+  border-radius: 8px;
+}
+
+/* =========================
+   قسم البطل (Hero)
+========================= */
+.hero {
+  height: 100vh;
+  background: url("images/hero-background.webp") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--dark-overlay);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.contact-btn {
+  margin-top: 30px;
+  background-color: var(--main-yellow);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  animation: bounce 3.5s infinite;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: var(--main-yellow-dark);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* نص متدرج */
+.gradient-text {
+  background-image: linear-gradient(to left, #4dcc30, #4dcc30, #ffb834, #ffb834);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+
+
+
+/* ---- About Section ---- */
+.about-section {
+  background-color: #ffffff;
+  padding: 120px 20px 80px; /* رفع العنوان أكثر */
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.6rem; /* أكبر قليلاً */
+  margin-bottom: 40px;
+  color: var(--main-blue);
+}
+
+.about-box {
+  display: inline-block;
+  padding: 40px;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  border: 3px solid;
+  border-image: linear-gradient(45deg, #F4B63F, #6BBF59, #0080C6) 1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+  line-height: 2;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: justify;
+}
+
+
+.about-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+
+
+
+
+
+/* =========================
+   قسم جدول المؤتمر
+========================= */
+.schedule-section {
+  padding: 100px 20px;
+  background-color: #eaeaea;
+  text-align: center;
+}
+
+.schedule-table {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.schedule-section h2 {
+  font-size: 2.4rem;
+  color: var(--main-blue);
+  margin-bottom: 40px; /* موجود */
+  padding-bottom: 10px; /* إضافة مسافة إضافية للفصل عن الجدول */
+}
+
+.schedule-row {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-row.header {
+  background: linear-gradient(to right, var(--main-green), var(--main-yellow));
+  color: white;
+  font-weight: bold;
+}
+
+.schedule-row .col {
+  flex: 1 1 33%;
+  padding: 16px;
+  font-size: 1.1rem;
+  border-left: 1px solid #eee;
+}
+
+.schedule-row .col:first-child {
+  border-left: none;
+}
+
+.schedule-row:nth-child(even):not(.header) {
+  background-color: #ffffff;
+}
+
+.schedule-row:nth-child(odd):not(.header) {
+  background-color: #f1f7fb;
+}
+
+/* حركة الظهور مرة واحدة */
+.fade-in-once {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-in-once.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   قسم الموقع
+========================= */
+
+/* عنوان موقع المؤتمر */
+.location-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px; /* موجود */
+  padding-bottom: 10px; /* مسافة إضافية قبل الصورة والنص */
+}
+
+.location-section {
+  padding: 100px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.location-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.location-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.location-text {
+  max-width: 450px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.map-button {
+  margin-top: 40px;
+  padding: 14px 26px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main-yellow);
+  color: white;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  animation: bounce 3.5s infinite;
+  transition: background-color 0.3s;
+}
+
+.map-button:hover {
+  background-color: var(--main-yellow-dark);
+}
+
+
+/* =========================
+   قسم الداعمين
+========================= */
+.supporters-section {
+  padding: 100px 20px;
+  background-color: #eaeaea;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+/* صف الشعارات */
+.supporters-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  justify-content: center;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+/* صندوق الشعار */
+.supporter-card {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  border: 3px solid;
+  border-image: linear-gradient(45deg, #F4B63F, #6BBF59, #0080C6) 1;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* صورة الشعار */
+.supporter-card img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* تكبير الصورة عند المرور */
+.supporter-card:hover img {
+  transform: scale(1.1);
+}
+
+/* شريط التمرير */
+.supporters-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.supporters-row::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* =========================
+   قسم التسجيل
+========================= */
+.register-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.register-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.register-desc {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.register-btn {
+  background-color: var(--main-yellow);
+  color: white;
+  font-size: 1.2rem;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.register-btn:hover {
+  background-color: var(--main-yellow-dark);
+  transform: translateY(-3px);
+}
+
+/* =========================
+   الفوتر
+========================= */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* =========================
+   ميديا كويري - الجوال
+========================= */
+@media (max-width: 768px) {
+
+  /* إخفاء الروابط في الجوال وإظهار أيقونة القائمة */
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: inline-block;
+  }
+
+  /* تصغير النصوص في قسم البطل */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* جعل محتوى الموقع عمودي */
+  .location-content {
+    flex-direction: column;
+  }
+
+  .location-text {
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .location-title {
+    font-size: 2rem;
+  }
+
+  /* الداعمين - سطر واحد قابل للتمرير */
+  .supporters-row {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-left: 10px;
+  }
+
+  .supporter-card {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 120px;
+  }
+
+  /* التسجيل */
+  .register-section h2 {
+    font-size: 2rem;
+  }
+
+  .register-desc {
+    font-size: 1rem;
+  }
+
+  .register-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  /* جدول المؤتمر */
+  .schedule-row {
+    flex-direction: column;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 8px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .schedule-row .col {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    text-align: right;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    border-left: none !important;
+  }
+
+  .schedule-row .col:last-child {
+    border-bottom: none;
+  }
+
+  /* التاريخ */
+  .schedule-row .col:nth-child(1) {
+    background: linear-gradient(to right, var(--main-green), var(--main-yellow));
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: none;
+  }
+
+  .schedule-row.header {
+    display: none; /* إخفاء رأس الجدول */
+  }
+}
