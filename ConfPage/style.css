@@ -137,6 +137,17 @@ body, html {
   color: var(--main-green);
 }
 
+@media (max-width:768px) {
+  .language-switcher i {
+    font-size: 24px;
+    color: #d89a2a;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .language-switcher:hover i {
+    color: #d89a2a;
+  }
+}
 
 /* =========================
    القائمة الجوال
@@ -205,7 +216,7 @@ body, html {
 ========================= */
 .hero {
   height: 100vh;
-  background: url("images/hero-background.webp") no-repeat center center/cover;
+  background: url("images/hero-background.jpg") no-repeat center center/cover;
   position: relative;
   display: flex;
   align-items: center;
