@@ -133,7 +133,7 @@ function translateScheduleCells(lang) {
     ["Panel: Energy Challenges in Rural Areas", "حلقة نقاش: تحديات الطاقة في المناطق الريفية"],
     ["Recommendations & Closing", "التوصيات وختام المؤتمر"]
   ] : [
-    ["29 نوفمبر", "15 Nov"], ["30 نوفمبر", "30 Nov"], ["1 ديسمبر", "1 Dec"],
+    ["29 نوفمبر", "29 Nov"], ["30 نوفمبر", "30 Nov"], ["1 ديسمبر", "1 Dec"],
     ["صباحية", "Morning"], ["مسائية", "Evening"],
     ["تسجيل الحضور واستقبال المشاركين", "Registration & Participant Reception"],
     ["الكلمة الترحيبية وكلمة رئيس الجمهورية", "Opening Remarks & Presidential Address"],
