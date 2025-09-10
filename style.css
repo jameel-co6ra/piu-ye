@@ -70,6 +70,18 @@ body, html {
   font-size: 0.9rem;
 }
 
+@media (max-width:768px) {
+  .language-switcher i {
+    font-size: 20px; color: #2a5d9f;
+    transition: transform 0.3s, color 0.3s;
+  }
+  .language-switcher:hover i {
+    color:#2a5d9f;
+  }
+}
+
+
+
 /* mobile menu */
 .mobile-menu-icon { display: none; cursor: pointer; font-size: 1.5rem; color: #2a5d9f; }
 
@@ -83,7 +95,7 @@ body, html {
 }
 .mobile-menu .close-btn {
   position: absolute; top: 8px; right: 12px;
-  font-size: 1.8rem; cursor: pointer; color: #555;
+  font-size: 1.3rem; cursor: pointer; color: #555;
 }
 .mobile-menu a {
   text-decoration: none; color: #333;
