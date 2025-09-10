@@ -124,7 +124,7 @@ function translateScheduleCells(lang) {
   const rows = document.querySelectorAll("#scheduleTable .schedule-row:not(.header)");
 
   const translationsMap = lang === "ar" ? [
-    ["15 Nov", "15 نوفمبر"], ["16 Nov", "16 نوفمبر"], ["17 Nov", "17 نوفمبر"],
+    ["29 Nov", "29 نوفمبر"], ["30 Nov", "30 نوفمبر"], ["1 Dec", "1 ديسمبر"],
     ["Morning", "صباحية"], ["Evening", "مسائية"],
     ["Registration & Participant Reception", "تسجيل الحضور واستقبال المشاركين"],
     ["Opening Remarks & Presidential Address", "الكلمة الترحيبية وكلمة رئيس الجمهورية"],
@@ -133,7 +133,7 @@ function translateScheduleCells(lang) {
     ["Panel: Energy Challenges in Rural Areas", "حلقة نقاش: تحديات الطاقة في المناطق الريفية"],
     ["Recommendations & Closing", "التوصيات وختام المؤتمر"]
   ] : [
-    ["15 نوفمبر", "15 Nov"], ["16 نوفمبر", "16 Nov"], ["17 نوفمبر", "17 Nov"],
+    ["29 نوفمبر", "15 Nov"], ["30 نوفمبر", "30 Nov"], ["1 ديسمبر", "1 Dec"],
     ["صباحية", "Morning"], ["مسائية", "Evening"],
     ["تسجيل الحضور واستقبال المشاركين", "Registration & Participant Reception"],
     ["الكلمة الترحيبية وكلمة رئيس الجمهورية", "Opening Remarks & Presidential Address"],
