@@ -120,27 +120,28 @@ setText("navabout", t.nav_about);
 }
 
 // ====================== ترجمة محتوى الجدول ======================
+// ====================== ترجمة محتوى الجدول ======================
 function translateScheduleCells(lang) {
   const rows = document.querySelectorAll("#scheduleTable .schedule-row:not(.header)");
 
   const translationsMap = lang === "ar" ? [
-    ["29 Nov", "29 نوفمبر"], ["30 Nov", "30 نوفمبر"], ["1 Dec", "1 ديسمبر"],
+    ["27 Nov", "27 نوفمبر"], ["28 Nov", "28 نوفمبر"], ["29 Nov", "29 نوفمبر"],
     ["Morning", "صباحية"], ["Evening", "مسائية"],
-    ["Registration & Participant Reception", "تسجيل الحضور واستقبال المشاركين"],
-    ["Opening Remarks & Presidential Address", "الكلمة الترحيبية وكلمة رئيس الجمهورية"],
-    ["Session: Financing Energy Projects in Yemen", "جلسة تمويل مشاريع الطاقة في اليمن"],
-    ["Showcase: Renewable Energy Projects", "عرض مشاريع الطاقة المتجددة"],
-    ["Panel: Energy Challenges in Rural Areas", "حلقة نقاش: تحديات الطاقة في المناطق الريفية"],
-    ["Recommendations & Closing", "التوصيات وختام المؤتمر"]
+    ["Official Opening and Keynote Speeches", "الافتتاح الرسمي وكلمات كبار الشخصيات"],
+    ["Strategic Sessions on Energy Recovery and Donor Coordination", "جلسات استراتيجية حول تعافي قطاع الطاقة وتنسيق الدعم الدولي"],
+    ["Public-Private Partnerships and Energy Investments", "شراكات واستثمارات الطاقة بين القطاعين العام والخاص"],
+    ["Rural Electrification and Sustainable Development", "كهربة الريف والتنمية المستدامة في اليمن"],
+    ["NDC Launch and Climate-Energy Financing", "إطلاق المساهمات الوطنية وتمويل الطاقة والمناخ"],
+    ["Workshops and Closing: Innovation and Fair Energy Transition", "ورش العمل والختام: الابتكار والعدالة في التحول الطاقي"]
   ] : [
-    ["29 نوفمبر", "29 Nov"], ["30 نوفمبر", "30 Nov"], ["1 ديسمبر", "1 Dec"],
+    ["27 نوفمبر", "27 Nov"], ["28 نوفمبر", "28 Nov"], ["29 نوفمبر", "29 Nov"],
     ["صباحية", "Morning"], ["مسائية", "Evening"],
-    ["تسجيل الحضور واستقبال المشاركين", "Registration & Participant Reception"],
-    ["الكلمة الترحيبية وكلمة رئيس الجمهورية", "Opening Remarks & Presidential Address"],
-    ["جلسة تمويل مشاريع الطاقة في اليمن", "Session: Financing Energy Projects in Yemen"],
-    ["عرض مشاريع الطاقة المتجددة", "Showcase: Renewable Energy Projects"],
-    ["حلقة نقاش: تحديات الطاقة في المناطق الريفية", "Panel: Energy Challenges in Rural Areas"],
-    ["التوصيات وختام المؤتمر", "Recommendations & Closing"]
+    ["الافتتاح الرسمي وكلمات كبار الشخصيات", "Official Opening and Keynote Speeches"],
+    ["جلسات استراتيجية حول تعافي قطاع الطاقة وتنسيق الدعم الدولي", "Strategic Sessions on Energy Recovery and Donor Coordination"],
+    ["شراكات واستثمارات الطاقة بين القطاعين العام والخاص", "Public-Private Partnerships and Energy Investments"],
+    ["كهربة الريف والتنمية المستدامة في اليمن", "Rural Electrification and Sustainable Development"],
+    ["إطلاق المساهمات الوطنية وتمويل الطاقة والمناخ", "NDC Launch and Climate-Energy Financing"],
+    ["ورش العمل والختام: الابتكار والعدالة في التحول الطاقي", "Workshops and Closing: Innovation and Fair Energy Transition"]
   ];
 
   rows.forEach(row => {
@@ -274,7 +275,5 @@ history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
     history.go(1);
 };
-
-
 
 
