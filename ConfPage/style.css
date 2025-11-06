@@ -423,6 +423,19 @@ body, html {
   }
 }
 
+/* =========================
+   ضبط اتجاه جدول المؤتمر حسب اللغة
+========================= */
+.schedule-table[dir="rtl"] {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.schedule-table[dir="ltr"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
 
 
 /* =========================
