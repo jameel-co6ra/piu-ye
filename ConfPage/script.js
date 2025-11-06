@@ -46,7 +46,7 @@ const translations = {
     hero_title: "Welcome to Yemen Energy Conference",
     hero_text: "Towards a Recovered Yemen with Sustainable Energy",
     hero_btn: "Contact Us",
-    schedule_title: "Conference Schedule",
+    schedule_title: "Conference Agenda",
     col_date: "Date",
     col_period: "Period",
     col_title: "Session Title",
