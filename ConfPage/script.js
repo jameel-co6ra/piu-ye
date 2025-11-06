@@ -119,7 +119,7 @@ setText("navabout", t.nav_about);
   translateScheduleCells(lang);
 
   
-// ضبط اتجاه الجدول حسب اللغة
+// ضبط اتجاه النص داخل جدول المؤتمر حسب اللغة
 const scheduleTable = document.getElementById("scheduleTable");
 if (scheduleTable) {
   scheduleTable.style.direction = lang === "ar" ? "rtl" : "ltr";
