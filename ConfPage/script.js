@@ -125,6 +125,9 @@ if (scheduleTable) {
   scheduleTable.style.direction = lang === "ar" ? "rtl" : "ltr";
   scheduleTable.style.textAlign = lang === "ar" ? "right" : "left";
 }
+
+scheduleTable.style.setProperty("direction", lang === "ar" ? "rtl" : "ltr", "important");
+scheduleTable.style.setProperty("text-align", lang === "ar" ? "right" : "left", "important");
 }
 
 // ====================== ترجمة محتوى الجدول ======================
