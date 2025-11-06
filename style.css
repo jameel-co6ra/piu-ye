@@ -646,3 +646,81 @@ body, html {
   font-size: 0.9rem;
   margin-top: 50px;
 }
+
+
+/* =========================
+   تحسين عرض العناوين للجوال
+========================= */
+@media (max-width: 768px) {
+
+  /* العناوين الرئيسية */
+  h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.4;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+  }
+
+  /* الأقسام الرئيسية */
+  .about-heading,
+  .facility-title,
+  .co2-heading,
+  .more-title,
+  .departments-section h2,
+  .objectives-section h2,
+  .achievements-section h2,
+  .contact-title {
+    font-size: 1.4rem !important;
+    margin-bottom: 25px;
+  }
+
+  /* النصوص داخل الأقسام */
+  .about-text p,
+  .about-card p,
+  .facility-card p,
+  .co2-text,
+  .more-text p,
+  .objective-box p,
+  .dept-card p,
+  .achievements-text,
+  .contact-intro {
+    font-size: 0.95rem !important;
+    line-height: 1.7;
+  }
+
+  /* تحسين الهوامش بين الأقسام */
+  section {
+    padding: 60px 16px !important;
+  }
+
+  /* العناوين داخل البطاقات */
+  .objective-box h3,
+  .dept-card h3,
+  .achievement-card h3 {
+    font-size: 1rem !important;
+  }
+
+  /* العناوين في الهيدر */
+  .navbar {
+    padding: 10px 16px;
+  }
+
+  .nav-logo img {
+    height: 40px;
+  }
+
+  /* تحسين التناسق في أقسام الصور والنصوص */
+  .facility-wrapper,
+  .co2-container,
+  .more-content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
