@@ -391,6 +391,40 @@ body, html {
   transform: translateY(0);
 }
 
+
+/* عنوان كل يوم */
+.schedule-day-title {
+  background: linear-gradient(to right, var(--main-green), var(--main-yellow));
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 10px 10px 0 0;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* تحسين عرض الجدول في الجوال */
+@media (max-width: 768px) {
+  .schedule-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .schedule-row .col {
+    flex: 1 1 100%;
+    border-left: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .schedule-day-title {
+    font-size: 1.1rem;
+  }
+}
+
+
+
 /* =========================
    قسم الموقع
 ========================= */
@@ -673,5 +707,58 @@ body, html {
 
   .schedule-row.header {
     display: none; /* إخفاء رأس الجدول */
+  }
+}
+
+
+/* =========================
+   تحسين عرض العناوين في الجوال
+========================= */
+@media (max-width: 768px) {
+  /* عنوان رئيسي لكل قسم */
+  h2.gradient-text,
+  .schedule-section h2,
+  .location-title,
+  .register-section h2,
+  .about-section h2 {
+    font-size: 1.6rem;       /* تصغير حجم العنوان */
+    margin-bottom: 20px;     /* تقليل المسافة السفلية */
+    line-height: 1.4;
+  }
+
+  /* عنوان اليوم في جدول المؤتمر */
+  .schedule-day-title {
+    font-size: 1rem;         /* تصغير عنوان اليوم */
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 6px;
+  }
+
+  /* صندوق النصوص داخل الأقسام */
+  .about-box,
+  .location-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 20px;
+  }
+
+  /* تحسين الفقرات */
+  .register-desc,
+  #about-text,
+  #location-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* تصغير أزرار */
+  .map-button,
+  .register-btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+
+  /* تصغير النص في الفوتر */
+  .footer {
+    font-size: 0.8rem;
   }
 }
