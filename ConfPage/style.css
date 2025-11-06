@@ -424,6 +424,14 @@ body, html {
 }
 
 
+/* دعم الاتجاهين داخل جدول المؤتمر */
+.schedule-table[style*="direction: rtl"] {
+  text-align: right;
+}
+
+.schedule-table[style*="direction: ltr"] {
+  text-align: left;
+}
 
 /* =========================
    قسم الموقع
