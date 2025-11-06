@@ -117,6 +117,14 @@ setText("navabout", t.nav_about);
 
   // ترجمة محتوى الجدول (الخلايا الداخلية)
   translateScheduleCells(lang);
+
+  
+// ضبط اتجاه الجدول حسب اللغة
+const scheduleTable = document.getElementById("scheduleTable");
+if (scheduleTable) {
+  scheduleTable.style.direction = lang === "ar" ? "rtl" : "ltr";
+  scheduleTable.style.textAlign = lang === "ar" ? "right" : "left";
+}
 }
 
 // ====================== ترجمة محتوى الجدول ======================
