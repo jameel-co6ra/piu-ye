@@ -121,39 +121,57 @@ setText("navabout", t.nav_about);
 
 // ====================== ترجمة محتوى الجدول ======================
 // ====================== ترجمة محتوى الجدول ======================
+// ====================== ترجمة محتوى الجدول ======================
+// ====================== ترجمة محتوى الجدول ======================
 function translateScheduleCells(lang) {
-  const rows = document.querySelectorAll("#scheduleTable .schedule-row:not(.header)");
+  const dayTitles = document.querySelectorAll(".schedule-day-title");
+  const periodHeaders = document.querySelectorAll("#col-period, #col-period-2");
+  const titleHeaders = document.querySelectorAll("#col-title, #col-title-2");
+  const rows = document.querySelectorAll(".schedule-row:not(.header)");
 
-  const translationsMap = lang === "ar" ? [
-    ["27 Nov", "27 نوفمبر"], ["28 Nov", "28 نوفمبر"], ["29 Nov", "29 نوفمبر"],
-    ["Morning", "صباحية"], ["Evening", "مسائية"],
-    ["Official Opening and Keynote Speeches", "الافتتاح الرسمي وكلمات كبار الشخصيات"],
-    ["Strategic Sessions on Energy Recovery and Donor Coordination", "جلسات استراتيجية حول تعافي قطاع الطاقة وتنسيق الدعم الدولي"],
-    ["Public-Private Partnerships and Energy Investments", "شراكات واستثمارات الطاقة بين القطاعين العام والخاص"],
-    ["Rural Electrification and Sustainable Development", "كهربة الريف والتنمية المستدامة في اليمن"],
-    ["NDC Launch and Climate-Energy Financing", "إطلاق المساهمات الوطنية وتمويل الطاقة والمناخ"],
-    ["Workshops and Closing: Innovation and Fair Energy Transition", "ورش العمل والختام: الابتكار والعدالة في التحول الطاقي"]
-  ] : [
-    ["27 نوفمبر", "27 Nov"], ["28 نوفمبر", "28 Nov"], ["29 نوفمبر", "29 Nov"],
-    ["صباحية", "Morning"], ["مسائية", "Evening"],
-    ["الافتتاح الرسمي وكلمات كبار الشخصيات", "Official Opening and Keynote Speeches"],
-    ["جلسات استراتيجية حول تعافي قطاع الطاقة وتنسيق الدعم الدولي", "Strategic Sessions on Energy Recovery and Donor Coordination"],
-    ["شراكات واستثمارات الطاقة بين القطاعين العام والخاص", "Public-Private Partnerships and Energy Investments"],
-    ["كهربة الريف والتنمية المستدامة في اليمن", "Rural Electrification and Sustainable Development"],
-    ["إطلاق المساهمات الوطنية وتمويل الطاقة والمناخ", "NDC Launch and Climate-Energy Financing"],
-    ["ورش العمل والختام: الابتكار والعدالة في التحول الطاقي", "Workshops and Closing: Innovation and Fair Energy Transition"]
-  ];
+  if (lang === "ar") {
+    // عناوين الأيام
+    dayTitles[0].textContent = "26 نوفمبر – القيادة والرؤية والتنسيق";
+    dayTitles[1].textContent = "27 نوفمبر – القطاع الخاص وكهربة المجتمع الشاملة";
 
-  rows.forEach(row => {
-    row.querySelectorAll(".col").forEach(cell => {
-      translationsMap.forEach(([from, to]) => {
-        if (cell.textContent.trim() === from) {
-          cell.textContent = to;
-        }
-      });
-    });
-  });
+    // رؤوس الأعمدة
+    periodHeaders.forEach(h => (h.textContent = "الفترة"));
+    titleHeaders.forEach(h => (h.textContent = "عنوان الجلسة"));
+
+    // صفوف اليوم الأول
+    rows[0].children[0].textContent = "صباحية";
+    rows[0].children[1].textContent = "حفل الافتتاح الرسمي وكلمات كبار الشخصيات";
+    rows[1].children[0].textContent = "مسائية";
+    rows[1].children[1].textContent = "الطاقة لتعافي اليمن: بناء المؤسسات وتنسيق الدعم الدولي";
+
+    // صفوف اليوم الثاني
+    rows[2].children[0].textContent = "صباحية";
+    rows[2].children[1].textContent = "الشراكات بين القطاعين العام والخاص وإعلانات الاستثمار";
+    rows[3].children[0].textContent = "مسائية";
+    rows[3].children[1].textContent = "كهربة الريف وربطها بالتنمية المستدامة";
+  } else {
+    // English version
+    dayTitles[0].textContent = "26 Nov. – Leadership, Vision & Coordination";
+    dayTitles[1].textContent = "27 Nov. – Private Sector and Inclusive Electrification";
+
+    // Column headers
+    periodHeaders.forEach(h => (h.textContent = "Period"));
+    titleHeaders.forEach(h => (h.textContent = "Session Title"));
+
+    // Day 1 sessions
+    rows[0].children[0].textContent = "Morning";
+    rows[0].children[1].textContent = "Opening Ceremony and High-Level Speeches";
+    rows[1].children[0].textContent = "Afternoon";
+    rows[1].children[1].textContent = "Energy for Yemen’s Recovery, Building Institutions, and Donor Coordination";
+
+    // Day 2 sessions
+    rows[2].children[0].textContent = "Morning";
+    rows[2].children[1].textContent = "Public-Private Partnerships and Investment Announcements";
+    rows[3].children[0].textContent = "Afternoon";
+    rows[3].children[1].textContent = "Rural Electrification and Development Nexus";
+  }
 }
+
 
 // ====================== تبديل اللغة ======================
 function toggleLanguage() {
