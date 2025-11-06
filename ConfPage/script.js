@@ -63,71 +63,53 @@ const translations = {
 
 // ====================== تطبيق الترجمة ======================
 function applyLanguage(lang) {
-  // ضبط اللغة واتجاه الصفحة
+  // ضبط اللغة واتجاه الصفحة العامة
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   localStorage.setItem("language", lang);
 
   const t = translations[lang];
 
-  // تحديث النصوص في الـ Navbar
+  // تحديث النصوص العامة
   setText("nav-home", t.nav_home);
   setText("nav-schedule", t.nav_schedule);
   setText("nav-location", t.nav_location);
   setText("nav-register", t.nav_register);
-
   setText("navhome", t.nav_home);
   setText("navschedule", t.nav_schedule);
   setText("navlocation", t.nav_location);
   setText("navregister", t.nav_register);
-
-  // تحديث النصوص في الصفحة الرئيسية
   setText("hero-title", t.hero_title);
   setText("hero-text", t.hero_text);
   setText("hero-btn", t.hero_btn);
-
-  // تحديث جدول المؤتمر
   setText("schedule-title", t.schedule_title);
   setText("col-date", t.col_date);
   setText("col-period", t.col_period);
   setText("col-title", t.col_title);
-
-  // تحديث موقع المؤتمر
   setText("location-title", t.location_title);
   setText("location-btn-text", t.location_btn_text);
-  const locationTextEl = document.getElementById("location-text");
-  if (locationTextEl) locationTextEl.querySelector("p").textContent = t.location_text;
-
-  // تحديث قسم الداعمين
   setText("supporters-title", t.supporters_title);
-
-setText("nav-about", t.nav_about);
-
-setText("navabout", t.nav_about);
+  setText("nav-about", t.nav_about);
+  setText("navabout", t.nav_about);
   setText("about-title", t.about_title);
   setText("about-text", t.about_text);
-
-  // تحديث قسم التسجيل
   setText("register-title", t.register_title);
   setText("register-desc", t.register_desc);
   setText("register-btn", t.register_btn);
-
-  // تحديث الفوتر
   setText("footer-text", t.footer_text);
 
-  // ترجمة محتوى الجدول (الخلايا الداخلية)
+  // تحديث نص موقع المؤتمر
+  const locationTextEl = document.getElementById("location-text");
+  if (locationTextEl) locationTextEl.querySelector("p").textContent = t.location_text;
+
+  // ترجمة محتوى الجدول
   translateScheduleCells(lang);
 
-  
-// ضبط اتجاه النص داخل جدول المؤتمر حسب اللغة
-const scheduleTable = document.getElementById("scheduleTable");
-if (scheduleTable) {
-  scheduleTable.style.direction = lang === "ar" ? "rtl" : "ltr";
-  scheduleTable.style.textAlign = lang === "ar" ? "right" : "left";
-}
-
-scheduleTable.style.setProperty("direction", lang === "ar" ? "rtl" : "ltr", "important");
-scheduleTable.style.setProperty("text-align", lang === "ar" ? "right" : "left", "important");
+  // ✅ ضبط اتجاه الجدول حسب اللغة
+  const scheduleTable = document.getElementById("scheduleTable");
+  if (scheduleTable) {
+    scheduleTable.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+  }
 }
 
 // ====================== ترجمة محتوى الجدول ======================
