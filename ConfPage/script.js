@@ -132,16 +132,16 @@ function translateScheduleCells(lang) {
     titleHeaders.forEach(h => (h.textContent = "عنوان الجلسة"));
 
     // صفوف اليوم الأول
-    rows[0].children[0].textContent = "صباحية";
+    rows[0].children[0].textContent = "جلسة صباحية";
     rows[0].children[1].textContent = "حفل الافتتاح الرسمي وكلمات كبار الشخصيات";
-    rows[1].children[0].textContent = "مسائية";
+    rows[1].children[0].textContent = "جلسة مسائية";
     rows[1].children[1].textContent = "الطاقة لتعافي اليمن: بناء المؤسسات وتنسيق الدعم الدولي";
 
     // صفوف اليوم الثاني
-    rows[2].children[0].textContent = "صباحية";
+    rows[2].children[0].textContent = "جلسة صباحية";
     rows[2].children[1].textContent = "الشراكات بين القطاعين العام والخاص وإعلانات الاستثمار";
-    rows[3].children[0].textContent = "مسائية";
-    rows[3].children[1].textContent = "كهربة الريف وربطها بالتنمية المستدامة";
+    rows[3].children[0].textContent = "جلسة مسائية";
+    rows[3].children[1].textContent = "كهرباء الريف وربطها بالتنمية المستدامة";
   } else {
     // English version
     dayTitles[0].textContent = "26 Nov. – Leadership, Vision & Coordination";
@@ -152,15 +152,15 @@ function translateScheduleCells(lang) {
     titleHeaders.forEach(h => (h.textContent = "Session Title"));
 
     // Day 1 sessions
-    rows[0].children[0].textContent = "Morning";
+    rows[0].children[0].textContent = "Morning Session";
     rows[0].children[1].textContent = "Opening Ceremony and High-Level Speeches";
-    rows[1].children[0].textContent = "Afternoon";
+    rows[1].children[0].textContent = "Afternoon Session";
     rows[1].children[1].textContent = "Energy for Yemen’s Recovery, Building Institutions, and Donor Coordination";
 
     // Day 2 sessions
-    rows[2].children[0].textContent = "Morning";
+    rows[2].children[0].textContent = "Morning Session";
     rows[2].children[1].textContent = "Public-Private Partnerships and Investment Announcements";
-    rows[3].children[0].textContent = "Afternoon";
+    rows[3].children[0].textContent = "Afternoon Session";
     rows[3].children[1].textContent = "Rural Electrification and Development Nexus";
   }
 }
